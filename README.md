@@ -7,7 +7,7 @@
 </p>
 
 <div align='center'>
-<b>English</b> | <a href="README.md">简体中文</a>
+<a href="README.en.md">English</a> | <a href="README.md">简体中文</a>
 </div>
 
 ## 特性

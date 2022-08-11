@@ -7,7 +7,7 @@ Mocking up web app with <b>mini-program-boot </b><sup><em>(speed)</em></sup><br>
 </p>
 
 <div align='center'>
-<b>简体中文</b> | <a href="README.en.md">English</a>
+<a href="README.en.md">English</a> | <a href="README.md">简体中文</a>
 </div>
 
 ## Features
