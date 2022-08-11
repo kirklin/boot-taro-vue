@@ -4,16 +4,11 @@
   </view>
 </template>
 
-<script>
+<script setup lang="ts">
 import { ref } from "vue";
 import "./index.css";
+import { logLabeled } from "../../utils/logger";
+logLabeled("I'm ready!  ⸜(๑'ᵕ'๑)⸝⋆*", "log", "", "color: #66ccff");
 
-export default {
-  setup() {
-    const msg = ref("Hello World");
-    return {
-      msg,
-    };
-  },
-};
+const msg = ref("Hello World");
 </script>
