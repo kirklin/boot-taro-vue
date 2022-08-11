@@ -1,3 +1,4 @@
+const path = require("path");
 const config = {
   projectName: "mini-program-boot",
   date: "2022-8-11",
@@ -7,6 +8,9 @@ const config = {
     750: 1,
     828: 1.81 / 2,
     375: 2,
+  },
+  alias: {
+    "@": path.resolve(__dirname, "..", "src"),
   },
   sourceRoot: "src",
   outputRoot: "dist",
@@ -18,6 +22,8 @@ const config = {
         enableDebugLog: true,
       },
     ],
+
+    "taro-plugin-pinia",
   ],
   defineConstants: {},
   copy: {

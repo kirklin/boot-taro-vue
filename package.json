@@ -17,6 +17,7 @@
     "css": "sass"
   },
   "scripts": {
+    "tsc": "vue-tsc --noEmit --skipLibCheck",
     "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
     "prettier": "prettier --write .",
     "prepare": "husky install",

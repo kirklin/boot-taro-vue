@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import Taro from "@tarojs/taro";
 
 export interface Options {
   path: string;
