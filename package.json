@@ -2,7 +2,7 @@
   "name": "mini-program-boot",
   "version": "1.0.0",
   "private": true,
-  "description": "mini-program-boot",
+  "description": "使用 Vue3、Taro 、TypeScript 、Tailwind/Windi CSS等技术开发微信小程序",
   "keywords": [
     "MiniProgramBoot",
     "mini-program-boot",
