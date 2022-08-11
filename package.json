@@ -14,7 +14,7 @@
   "templateInfo": {
     "name": "default",
     "typescript": true,
-    "css": "none"
+    "css": "sass"
   },
   "scripts": {
     "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
