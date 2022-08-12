@@ -26,6 +26,7 @@ function _log(
   args?: any,
   style = "color: inherit"
 ): void {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   if (!("console" in window) || !window.console[type]) {
     return;
@@ -81,19 +82,24 @@ function _log(
 
   try {
     if (!isSimpleType) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       // eslint-disable-next-line no-console
       console[type](msg);
     } else if (args) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       // eslint-disable-next-line no-console
       console[type](`${msg} %o`, ...argsToPass);
     } else {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       // eslint-disable-next-line no-console
       console[type](msg, ...argsToPass);
     }
-  } catch (ignored) {}
+  } catch (ignored) {
+    return;
+  }
 }
 
 /**

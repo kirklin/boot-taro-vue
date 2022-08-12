@@ -48,10 +48,13 @@ yarn install
 ### 开发
 
 只需要执行以下命令就可以在 http://localhost:10086 中看到
+
 ```bash
 npm run dev:h5
 ```
+
 只需要执行以下命令就可以导入微信小程序开发者工具，并实时监控代码变化
+
 ```bash
 npm run dev:webapp
 ```

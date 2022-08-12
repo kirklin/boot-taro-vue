@@ -11,7 +11,7 @@
     "taro/vue3"
   ],
   "parserOptions": {
-    'ecmaVersion': 12,
+    "ecmaVersion": 12,
     "parser": "@typescript-eslint/parser",
     "sourceType": "module",
     "ecmaFeatures": {
@@ -30,7 +30,6 @@
       "@typescript-eslint/ban-types": "off",
       "@typescript-eslint/no-non-null-assertion": "off",
       "@typescript-eslint/explicit-module-boundary-types": "off",
-      "vue/multi-word-component-names": "off",
       "no-var": "error",
       "prettier/prettier": "error",
       // 禁止出现console
@@ -143,6 +142,15 @@
       "no-case-declarations": "warn",
       "no-async-promise-executor": "warn"
     },
+    "overrides": [
+      //这里是添加的代码
+      {
+        "files": ["src/pages/index.vue", "src/pages/**/index.vue"], // 匹配pages和二级目录中的index.vue
+        "rules": {
+          "vue/multi-word-component-names": "off"
+        } //给上面匹配的文件指定规则
+      }
+    ],
     "globals": {
       "defineProps": "readonly",
       "defineEmits": "readonly",

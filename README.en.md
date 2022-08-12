@@ -29,7 +29,6 @@ Mocking up web app with <b>mini-program-boot </b><sup><em>(speed)</em></sup><br>
 - [VSCode](https://code.visualstudio.com/)
 - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
-
 ## Try it now!
 
 ### GitHub Template
