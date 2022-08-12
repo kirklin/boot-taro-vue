@@ -7,7 +7,7 @@ const config = {
     640: 2.34 / 2,
     750: 1,
     828: 1.81 / 2,
-    375: 2,
+    375: 2 / 1,
   },
   alias: {
     "@": path.resolve(__dirname, "..", "src"),
@@ -22,7 +22,7 @@ const config = {
         enableDebugLog: true,
       },
     ],
-
+    "@tarojs/plugin-html",
     "taro-plugin-pinia",
   ],
   defineConstants: {},
@@ -31,11 +31,17 @@ const config = {
     options: {},
   },
   framework: "vue3",
+  compiler: "webpack4",
+  sass: {
+    data: `@import "@nutui/nutui-taro/dist/styles/variables.scss";`,
+  },
   mini: {
     postcss: {
       pxtransform: {
         enable: true,
-        config: {},
+        config: {
+          selectorBlackList: ["nut-"],
+        },
       },
       url: {
         enable: true,
@@ -55,6 +61,7 @@ const config = {
   h5: {
     publicPath: "/",
     staticDirectory: "static",
+    esnextModules: ["nutui-taro"],
     postcss: {
       autoprefixer: {
         enable: true,

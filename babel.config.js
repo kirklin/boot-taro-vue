@@ -10,4 +10,16 @@ module.exports = {
       },
     ],
   ],
+  plugins: [
+    [
+      "import",
+      {
+        libraryName: "@nutui/nutui-taro",
+        libraryDirectory: "dist/packages/_es",
+        style: (name, file) => name.toLowerCase().replace("_es/", "") + "/index.scss",
+        camel2DashComponentName: false,
+      },
+      "nutui3-taro",
+    ],
+  ],
 };
