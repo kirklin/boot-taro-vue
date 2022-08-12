@@ -1,4 +1,4 @@
-import { defineConfig, transform } from "windicss/helpers";
+import { defineConfig } from "windicss/helpers";
 
 export default defineConfig({
   prefixer: false,
@@ -153,5 +153,4 @@ export default defineConfig({
   corePlugins: {
     container: false,
   },
-  plugins: [transform("daisyui")],
 });
