@@ -33,7 +33,7 @@ const config = {
   framework: "vue3",
   compiler: "webpack4",
   sass: {
-    data: `@import "@nutui/nutui-taro/dist/styles/variables.scss";`,
+    data: `@import "@nutui/nutui-taro/dist/styles/variables-jdt.scss";`,
   },
   mini: {
     postcss: {

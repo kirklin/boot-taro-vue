@@ -4,7 +4,7 @@ import { useSystem } from "@/stores";
 import Taro from "@tarojs/taro";
 import "./app.scss";
 import "windi.css";
-import { Button, Toast } from "@nutui/nutui-taro";
+import setNutUi from "@/setNutUi";
 
 const App = createApp({
   // 可以使用所有的 Vue 生命周期方法
@@ -25,7 +25,7 @@ const App = createApp({
   onHide() {},
   // 入口组件不需要实现 render 方法，即使实现了也会被 taro 所覆盖
 });
-App.use(Button).use(Toast);
 
+setNutUi(App);
 setupStore(App);
 export default App;

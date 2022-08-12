@@ -1,5 +1,8 @@
 <template>
-  <view class="index pl-7.5 h-screen bg-[#b5b5b5]" :class="{ 'text-[50px]': true }">
+  <view
+    class="index flex h-screen flex-col items-center bg-[#b5b5b5]"
+    :class="{ 'text-[50px]': true }"
+  >
     <text :class="['font-bold', 'text-[#ffffff]']">{{ msg }}</text>
     <nut-button type="primary" @click="handleClick('text', msg, true)">点我</nut-button>
     <nut-toast
