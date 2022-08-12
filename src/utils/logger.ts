@@ -56,6 +56,8 @@ function _log(
   }
 
   if (args) {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     argsToPass.push(args);
   }
 
@@ -73,6 +75,8 @@ function _log(
 
   if (labeled) {
     if (isSimpleType) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       argsToPass.unshift(editorLabelStyle, style);
       msg = `%c${editorLabelText}%c ${msg}`;
     } else {
