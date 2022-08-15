@@ -36,6 +36,13 @@ const config = {
     data: `@import "@nutui/nutui-taro/dist/styles/variables-jdt.scss";`,
   },
   mini: {
+    optimizeMainPackage: {
+      enable: true,
+      exclude: [
+        path.resolve(__dirname, "../src/utils/moduleName.js"),
+        (module) => module.resource?.indexOf("moduleName") >= 0,
+      ],
+    },
     postcss: {
       pxtransform: {
         enable: true,
