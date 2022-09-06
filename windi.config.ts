@@ -8,7 +8,7 @@ export default defineConfig({
   theme: {
     extend: {
       fontFamily: {
-        chinese: [
+        "chinese": [
           "Helvetica Neue",
           "Helvetica",
           "Arial",
@@ -18,8 +18,8 @@ export default defineConfig({
           "WenQuanYi Micro Hei",
           "sans-serif",
         ],
-        //黑体
-        blackFont: [
+        // 黑体
+        "blackFont": [
           "-apple-system",
           "Noto Sans",
           "Helvetica Neue",
@@ -40,8 +40,8 @@ export default defineConfig({
           "WenQuanYi Zen Hei Sharp",
           "sans-serif",
         ],
-        //楷体
-        kai: [
+        // 楷体
+        "kai": [
           "Baskerville",
           "Georgia",
           "Liberation Serif",
@@ -58,8 +58,8 @@ export default defineConfig({
           "TW-Kai",
           "serif",
         ],
-        //宋体
-        song: [
+        // 宋体
+        "song": [
           "Georgia",
           "Nimbus Roman No9 L",
           "Songti SC",
@@ -81,7 +81,7 @@ export default defineConfig({
           "MingLiU",
           "serif",
         ],
-        //仿宋体
+        // 仿宋体
         "fang-song": [
           "Baskerville",
           "Times New Roman",
@@ -94,13 +94,13 @@ export default defineConfig({
         ],
       },
       fontSize: {
-        xxxs: ["0.5rem", "0.5rem"], // 8px
-        xxs: ["0.625rem", "1rem"], // 10px
-        xs: ["0.75rem", "1rem"], // 12px
-        sm: ["0.875rem", "1.25rem"], // 14px
-        base: ["1rem", "1.5rem"], // 16px
-        lg: ["1.125rem", "1.75rem"], // 18px
-        xl: ["1.25rem", "1.75rem"], // 20px
+        "xxxs": ["0.5rem", "0.5rem"], // 8px
+        "xxs": ["0.625rem", "1rem"], // 10px
+        "xs": ["0.75rem", "1rem"], // 12px
+        "sm": ["0.875rem", "1.25rem"], // 14px
+        "base": ["1rem", "1.5rem"], // 16px
+        "lg": ["1.125rem", "1.75rem"], // 18px
+        "xl": ["1.25rem", "1.75rem"], // 20px
         "2xl": ["1.75rem", "2.25rem"], // 28px
       },
       colors: {
@@ -136,8 +136,8 @@ export default defineConfig({
       },
       spacing: {
         half: "50%",
-        "7.5": "1.875rem",
-        "22": "5.375rem",
+        7.5: "1.875rem",
+        22: "5.375rem",
       },
       borderRadius: {
         none: "0",

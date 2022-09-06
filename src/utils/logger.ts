@@ -17,51 +17,50 @@ export enum LogLevels {
  * @param {*} [args]      - argument to log with a message
  * @param {string} style  - additional styling to message
  */
-// eslint-disable-next-line max-params
+
 function _log(
   labeled: boolean,
   msg: string,
   type = "log",
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+
   args?: any,
-  style = "color: inherit"
+  style = "color: inherit",
 ): void {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  if (!("console" in window) || !window.console[type]) {
+  // @ts-expect-error
+  if (!("console" in window) || !window.console[type])
     return;
-  }
 
   const isSimpleType = ["info", "log", "warn", "error"].includes(type);
   const argsToPass = [];
 
   switch (_log.logLevel) {
     case LogLevels.ERROR:
-      if (type !== "error") {
+      if (type !== "error")
         return;
-      }
+
       break;
 
     case LogLevels.WARN:
-      if (!["error", "warn"].includes(type)) {
+      if (!["error", "warn"].includes(type))
         return;
-      }
+
       break;
 
     case LogLevels.INFO:
-      if (!isSimpleType || labeled) {
+      if (!isSimpleType || labeled)
         return;
-      }
+
       break;
   }
 
   if (args) {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
+    // @ts-expect-error
     argsToPass.push(args);
   }
 
-  const editorLabelText = `MiniProgram Boot`;
+  const editorLabelText = "MiniProgram Boot";
   const editorLabelStyle = `line-height: 1em;
             color: #006FEA;
             display: inline-block;
@@ -76,10 +75,11 @@ function _log(
   if (labeled) {
     if (isSimpleType) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
+      // @ts-expect-error
       argsToPass.unshift(editorLabelStyle, style);
       msg = `%c${editorLabelText}%c ${msg}`;
-    } else {
+    }
+    else {
       msg = `( ${editorLabelText} )${msg}`;
     }
   }
@@ -87,22 +87,25 @@ function _log(
   try {
     if (!isSimpleType) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
+      // @ts-expect-error
       // eslint-disable-next-line no-console
       console[type](msg);
-    } else if (args) {
+    }
+    else if (args) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
+      // @ts-expect-error
       // eslint-disable-next-line no-console
       console[type](`${msg} %o`, ...argsToPass);
-    } else {
+    }
+    else {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
+      // @ts-expect-error
       // eslint-disable-next-line no-console
       console[type](msg, ...argsToPass);
     }
-  } catch (ignored) {
-    return;
+  }
+  catch (ignored) {
+
   }
 }
 

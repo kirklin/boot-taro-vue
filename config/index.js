@@ -33,14 +33,14 @@ const config = {
   framework: "vue3",
   compiler: "webpack4",
   sass: {
-    data: `@import "@nutui/nutui-taro/dist/styles/variables-jdt.scss";`,
+    data: "@import \"@nutui/nutui-taro/dist/styles/variables-jdt.scss\";",
   },
   mini: {
     optimizeMainPackage: {
       enable: true,
       exclude: [
         path.resolve(__dirname, "../src/utils/moduleName.js"),
-        (module) => module.resource?.indexOf("moduleName") >= 0,
+        module => module.resource?.indexOf("moduleName") >= 0,
       ],
     },
     postcss: {
@@ -86,8 +86,8 @@ const config = {
 };
 
 module.exports = function (merge) {
-  if (process.env.NODE_ENV === "development") {
+  if (process.env.NODE_ENV === "development")
     return merge({}, config, require("./dev"));
-  }
+
   return merge({}, config, require("./prod"));
 };

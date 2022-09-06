@@ -1,4 +1,4 @@
-import { App } from "vue";
+import type { App } from "vue";
 import { createPinia } from "pinia";
 export { useCounter } from "./count";
 export { useSystem } from "./system";

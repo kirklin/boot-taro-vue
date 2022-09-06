@@ -1,5 +1,5 @@
-import { Icon, Button, Toast } from "@nutui/nutui-taro";
-import { App } from "vue";
+import { Button, Icon, Toast } from "@nutui/nutui-taro";
+import type { App } from "vue";
 const setNutUi = (app: App) => {
   app.use(Icon).use(Button).use(Toast);
 };

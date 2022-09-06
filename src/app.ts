@@ -1,7 +1,6 @@
 import { createApp } from "vue";
-import { setupStore } from "@/stores";
-import { useSystem } from "@/stores";
 import Taro from "@tarojs/taro";
+import { setupStore, useSystem } from "@/stores";
 import "./app.scss";
 import "windi.css";
 import setNutUi from "@/setNutUi";

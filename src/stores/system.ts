@@ -1,12 +1,12 @@
 import { defineStore } from "pinia";
-import Taro from "@tarojs/taro";
+import type Taro from "@tarojs/taro";
 
 export interface Options {
-  path: string;
-  scene: number;
-  query: object;
-  shareTicket: string;
-  referrerInfo: object;
+  path: string
+  scene: number
+  query: object
+  shareTicket: string
+  referrerInfo: object
 }
 
 const useSystem = defineStore({
